@@ -5,17 +5,14 @@ spring:
     name: ms-administracion-server-config
     
     
-#Configuracion Cloud (git)
+# Configuracion Local
+  profiles:
+    active: native
   cloud:
     config:
-      server:
-        git:
-          uri: https://github.com/deanAnder/curso-galaxy.git
-          searchPaths: ms-administracion-data-config
-          username: ${USER_NAME}
-          password: ${USER_PASSWORD} <- TOKEN ( con privilegios de lectura y escritura)
-          default-label: firstProject
-          cloneOnStart: true
+      server: 
+        native:
+          searchLocations: file:///D:/Anderson/Curso Galaxy-Java/Practica/ms-administracion-data-config
 
           
           
